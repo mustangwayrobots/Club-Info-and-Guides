@@ -154,7 +154,7 @@
 
     .card-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: var(--text-main);
       margin-bottom: 0.75rem;
@@ -162,6 +162,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      text-transform: capitalize; /* Automatically capitalizes the first letter of each word */
     }
 
     .card-description {
@@ -316,8 +317,12 @@
 
         const files = await response.json();
 
-        // Filter for Markdown files (.md), excluding LICENSE if present
-        const mdFiles = files.filter(file => file.type === 'file' && file.name.toLowerCase().endsWith('.md'));
+        // Filter for Markdown files (.md), excluding README.md and LICENSE
+        const mdFiles = files.filter(file => {
+          if (file.type !== 'file') return false;
+          const name = file.name.toLowerCase();
+          return name.endsWith('.md') && name !== 'readme.md' && name !== 'license.md';
+        });
 
         if (mdFiles.length === 0) {
           status.textContent = 'No guide documents found yet.';
@@ -331,12 +336,11 @@
           const card = document.createElement('div');
           card.className = 'card';
 
-          // Clean up file name for display (e.g., "teacher-guide-firmware.md" -> "Teacher Guide Firmware")
           const cleanName = file.name
             .replace(/\.md$/i, '')
             .replace(/[-_]/g, ' ');
 
-          // Choose an icon based on name
+          // Smart Icons based on file topic
           let icon = '📖';
           const lowerName = file.name.toLowerCase();
           if (lowerName.includes('firmware') || lowerName.includes('code')) icon = '⚡';
