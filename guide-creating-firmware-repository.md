@@ -1,6 +1,6 @@
 # Guide: Creating a New Firmware & Flashing Repository
 
-This guide walks you through setting up a new microcontroller or robotics repository so it integrates seamlessly with the **Mustang Way Robots** portal, supports web firmware flashing, and stays clean and organized.
+This guide walks you through setting up a new microcontroller or robotics repository so it integrates seamlessly with the **Mustang Way Robots** portal, supports web firmware flashing via GitHub Actions, and stays clean and organized.
 
 ---
 
@@ -31,15 +31,23 @@ To make sure your project card automatically displays the **⚡ Flash Firmware**
 
 ---
 
-## Step 4: Add the Flashing Files (`/flash/`)
-To enable browser-based flashing directly from the portal, your repository needs a `/flash/` directory:
-1. Copy the **`/flash/`** folder (which includes the `index.html` file and your compiled build files) directly from an existing working repository like `ESP NOW CAR`[cite: 1].
-2. Paste or upload it into your new repository. 
-3. *Note:* Because these files are written to be generic, you generally do not need to modify them—they will automatically look for and flash the binary builds inside your repository!
+## Step 4: Add the GitHub Actions Build Workflow (`.github/workflows/build.yml`)
+To automatically compile your source code into flashable binary files when you push updates:
+1. Copy the `.github/workflows/build.yml` file structure from an existing working repository (such as `ESP NOW CAR`)[cite: 1].
+2. Paste or upload it into your new repository under the exact same path. 
+3. This workflow handles the compilation process automatically in the cloud so you don't have to build binaries manually.
 
 ---
 
-## Step 5: Enable GitHub Pages for Web Flashing
+## Step 5: Add the Flashing Folder & Manifest File (`/flash/manifest.json`)
+To enable browser-based flashing directly from the portal:
+1. Copy the **`/flash/`** folder (which includes the web flasher `index.html`) from a working repository[cite: 1].
+2. Inside that folder, ensure your **`manifest.json`** file is properly configured. 
+3. *Note on Manifests:* The `manifest.json` file points the web flasher to your compiled binary parts and memory offsets. Because our setup is standardized, you can copy a working manifest configuration from another project[cite: 1] and adjust only the binary filenames if needed to match your project.
+
+---
+
+## Step 6: Enable GitHub Pages for Web Flashing
 So the web flasher can run live in the browser via GitHub Pages:
 1. In your repository, click **Settings** in the top navigation bar.
 2. On the left sidebar, click **Pages**.
@@ -48,7 +56,7 @@ So the web flasher can run live in the browser via GitHub Pages:
 
 ---
 
-## Step 6: Document Your Project in the README
+## Step 7: Document Your Project in the README
 Every good robotics project needs a brief overview so students know how to build it:
 * **Overview:** What does this robot or test code do?
 * **Hardware Wiring:** List pins, microcontrollers (e.g., ESP32-C3), and motor drivers used.
