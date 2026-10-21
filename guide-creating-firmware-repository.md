@@ -1,6 +1,6 @@
 # Guide: Creating a New Firmware & Flashing Repository
 
-This guide walks you through setting up a new microcontroller or robotics repository so it integrates seamlessly with the **Mustang Way Robots** portal, supports over-the-air/web firmware flashing, and stays clean and organized.
+This guide walks you through setting up a new microcontroller or robotics repository so it integrates seamlessly with the **Mustang Way Robots** portal, supports web firmware flashing, and stays clean and organized.
 
 ---
 
@@ -31,17 +31,24 @@ To make sure your project card automatically displays the **⚡ Flash Firmware**
 
 ---
 
-## Step 4: Add the Flash Files (Quickest Method)
-Instead of building flashing configuration files from scratch, the easiest method is to copy them directly from an existing working repository (such as `ESP NOW CAR`)[cite: 1]:
-
-1. Open a working repository like `ESP NOW CAR` in another tab[cite: 1].
-2. Copy the **`/flash/`** folder (which contains your `manifest.json` configuration)[cite: 1].
-3. Paste or recreate that folder structure in your new repository.
-4. Update the firmware binary paths inside your `manifest.json` to point to your new compiled build files so the web flasher targets the correct code.
+## Step 4: Add the Flashing Files (`/flash/`)
+To enable browser-based flashing directly from the portal, your repository needs a `/flash/` directory:
+1. Copy the **`/flash/`** folder (which includes the `index.html` file and your compiled build files) directly from an existing working repository like `ESP NOW CAR`[cite: 1].
+2. Paste or upload it into your new repository. 
+3. *Note:* Because these files are written to be generic, you generally do not need to modify them—they will automatically look for and flash the binary builds inside your repository!
 
 ---
 
-## Step 5: Document Your Project in the README
+## Step 5: Enable GitHub Pages for Web Flashing
+So the web flasher can run live in the browser via GitHub Pages:
+1. In your repository, click **Settings** in the top navigation bar.
+2. On the left sidebar, click **Pages**.
+3. Under **Build and deployment > Source**, select **Deploy from a branch**.
+4. Set the branch to **`main`** (and `/ (root)`), then click **Save**.
+
+---
+
+## Step 6: Document Your Project in the README
 Every good robotics project needs a brief overview so students know how to build it:
 * **Overview:** What does this robot or test code do?
 * **Hardware Wiring:** List pins, microcontrollers (e.g., ESP32-C3), and motor drivers used.
