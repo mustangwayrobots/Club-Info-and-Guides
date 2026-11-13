@@ -1,95 +1,127 @@
-# Downers Grove South Robotics Club: Lithium Battery Safety Policy & SOP
+# Lithium Battery Safety Policy & SOP
 
-**Document ID:** SOP-BAT-001
+**Downers Grove South Robotics Club (Mustang Way Robots)**
 
-**Applies To:** All Club Members, Student Drivers, and Mentors
+| Document info | |
+|---|---|
+| **Document ID** | SOP-BAT-001 |
+| **Version** | 2.0 |
+| **Effective date** | _(fill in)_ |
+| **Owner** | Club faculty advisor |
+| **Reviewed / approved by** | _(name, title, date: e.g. building administrator or science dept. chair)_ |
+| **Next review** | Every August, before batteries are handed out |
+| **Applies to** | All club members, student drivers, teachers, mentors and volunteers |
+| **Covers** | Handling, charging, transport, storage, home use and disposal of 1S LiPo pouch cells and Li-ion cells (e.g. 18650) used in club projects |
 
-**Scope:** Handling, Charging, Storage, Home Use, and Disposal of 1S LiPo (Lithium-Polymer) & Li-Ion Batteries
+> This SOP adds to the school and district safety rules. It does not replace them. If anything here conflicts with a school or district rule, the school or district rule wins.
 
-## 1. Core Principles & Philosophy
+---
 
-Lithium batteries (LiPo pouches and 18650 cells) store significant energy in a small footprint. When handled properly, they are efficient and reliable. When misused, punctured, over-discharged, or left unattended while charging, they pose serious risks of thermal runaway, toxic smoke, and fire.
+## 1. Why this matters
 
-**Rule #0:** Safety over speed. No robot, project deadline, or match victory is worth risking personal safety or damaging school or home property.
+Lithium batteries hold a lot of energy in a small package. They're safe when handled correctly. If one is punctured, crushed, shorted, over-charged or over-discharged, it can overheat and burn ("thermal runaway"). The fire is very hot, the smoke is toxic, and the cell can flare up again after it looks finished.
 
-## 2. Pre-Use Inspection (The "3-Point Check")
+**Rule #0: Safety over speed.** No robot, deadline or match is worth hurting yourself or damaging school or home property.
 
-Before installing any battery into an RC car, controller, or saber project, every member **must** complete the following inspection:
+## 2. Before you get a battery
 
-1. **Physical Inspection (Look):**
+1. You must attend the club's **battery safety briefing**, given by the advisor or a trained mentor.
+2. You and a parent/guardian must sign the [**Battery Safety Acknowledgment Form**](club_battery_safety_acknowledgment.md). The advisor keeps the signed form on file.
+3. You do not get a battery, and you may not take a battery project home, until both steps are done.
 
-   * Check for **swelling ("puffing")**, deformation, or dented corners.
+## 3. Pre-use inspection: the 3-point check
 
-   * Inspect outer foil wrapping or shrink tubing for tears, cracks, or exposed metal.
+Do this **every time** before you plug in, charge or drive.
 
-   * Ensure wire leads and JST connector pins are intact with no exposed copper.
+1. **Look**
+   * No **swelling ("puffing")**, bulges, dents or bent corners.
+   * No tears or cuts in the outer foil or shrink wrap. No exposed metal.
+   * Wires and the JST connector are intact, with no exposed copper and no melted plastic.
+2. **Feel**
+   * A healthy pouch is **flat and firm**. If it feels **puffy, soft, spongy, or like a pillow**, it is damaged. **DO NOT USE.**
+   * It should not be warm when it has been sitting unused.
+3. **Fit**
+   * The battery slides into its 3D-printed bay without force. **Never squeeze, bend or force a battery** to make it fit.
 
-2. **Tactile Check (Feel):**
+> 🚨 **Failed the check?** Unplug the JST connector, **do not charge it**, and hand it straight to the advisor or a mentor, or put it in the **Battery Quarantine Container** (see Section 8). Tell an adult the same day.
 
-   * Gently feel the soft pouch. If it feels squishy like a marshmallow or firm like a balloon, it is degraded. **DO NOT USE.**
+## 4. Handling rules (always)
 
-3. **Chassis Fitment:**
+* **Never** puncture, cut, crush, drill, bend or hit a battery.
+* **Never** solder directly to a battery or its tabs. Batteries connect only through their JST connector.
+* **Never** short the battery leads (for example with tweezers, a screwdriver or loose wire).
+* **Never** modify, re-wrap or repair a battery. Damaged batteries are replaced, not fixed.
+* Only use the battery type supplied by the club for that project.
+* Soft pouch batteries **must always be inside** their 3D-printed housing or rigid chassis when in use.
+* When assembling, route wires so screws, PCB edges and standoffs can't pinch the pouch or the wires.
+* **Stop driving** as soon as the project slows down or LEDs dim. Running a cell below about **3.0 V** damages it and makes it less safe to charge.
 
-   * Batteries must fit smoothly into their 3D-printed hard enclosures or battery bays. **NEVER force, squeeze, or bend a battery** to make it fit into an enclosure.
+## 5. Charging (school and home)
 
-> 🚨 **IMMEDIATE ACTION:** If a battery fails inspection, disconnect its JST connector, hand it directly to a mentor, or place it in the designated **Battery Quarantine Bucket**. Do not attempt to use or charge it.
+Charging is the riskiest time. These rules apply everywhere.
 
-## 3. Safe Operation & Hardware Enclosure
+1. **Only charge through the project's own USB-C port** with a normal USB charger or a computer USB port. Do not use hobby LiPo chargers, modified cables or homemade chargers unless the advisor has approved them.
+2. **Stay in the room.** Never leave a battery charging unattended.
+3. **Never charge overnight**, and unplug before you go to sleep or leave the room.
+4. **Hard, non-flammable surface only**: a desk, a metal tray or the club charging station. Keep it away from beds, blankets, clothing, paper, carpet and anything that burns.
+5. **Don't charge a battery that is hot, damaged, or failed the 3-point check.**
+6. **Check for heat.** A slightly warm housing is normal. If the housing gets **hot to the touch**, smells, hisses, smokes or swells, **unplug the USB cable** and move away (see Section 9).
+7. **At school**, charge only at the club charging station (a metal tray or LiPo-safe bag), when the advisor or a mentor is in the room.
 
-* **Armor & Enclosure Standard:** Soft pouch LiPo batteries **must always be enclosed** inside a 3D-printed protective plastic housing or rigid chassis. In most club projects, the battery is mounted securely beneath the PCB inside the 3D-printed body, accessible via screws for replacement or disposal.
+## 6. Transport
 
-* **JST Connections:** All batteries must connect via a modular JST connector. Never solder battery leads directly to a PCB. To swap or dispose of a cell, remove the housing screws and unplug the JST connector.
+* Carry batteries **inside their project housing**, unplugged when possible.
+* Spare or loose batteries go in a **LiPo-safe bag** or a closed plastic box with the connector taped. Never carry them loose in a pocket or backpack with keys, coins or other metal.
 
-* **Securing Cables:** Ensure internal wiring is routed so screws, PCB edges, or plastic standoffs do not pinch the battery pouch or wires during assembly.
+## 7. Storage
 
-* **Low-Voltage Warning:** Discontinue vehicle/project operation immediately if motor performance drops or LEDs dim. Over-discharging a cell below **3.0V** permanently damages internal chemistry.
+**At school**
+* Batteries and battery projects are stored in the club's designated **fire-resistant container** (e.g. a metal cabinet, metal box or LiPo-safe bags). Do not leave them in lockers, backpacks or on desks.
 
-## 4. Mandatory Charging Protocol (School & Home)
+**At home**
+* Keep projects somewhere cool and dry, on a hard surface. Not in a hot car, attic, or packed in a closet under clothes.
+* If a project won't be used for more than about a month, open the housing and **unplug the JST connector**.
+* Bring swollen, damaged or dead batteries **back to the club**. Don't throw them away at home.
 
-Charging is the highest-risk phase of battery management. Whether charging at school during club meetings or taking projects home, **every member must follow these non-negotiable rules**:
+## 8. Damaged batteries and disposal
 
-1. **Active Supervision Required:** 
+* Damaged, swollen or dead batteries are unplugged, the connector is covered with tape, and the battery goes in the **Battery Quarantine Container**: a metal can or bucket with a lid, partly filled with dry sand, kept away from anything that burns.
+* The **advisor** takes quarantined batteries to an approved battery recycling drop-off (e.g. the county household hazardous waste site or a retail battery drop-off) or follows the school's hazardous waste process.
+* **Never** put lithium batteries in the trash or in recycling bins. They start fires in garbage trucks and sorting plants.
+* Students do **not** discharge, cut open or "neutralize" batteries themselves.
 
-   * **MUST be present in the room while charging.** Never leave a battery charging unattended.
+## 9. Emergency: heat, smoke, swelling or fire
 
-   * **DO NOT charge overnight under any circumstances.** Unplug all USB charge cables before going to sleep or leaving the room/workshop.
+1. **ALERT:** Shout **"BATTERY EMERGENCY!"** and tell the nearest adult.
+2. **UNPLUG** the USB cable **only if** you can do it without touching the hot battery.
+3. **GET BACK.** Move away and keep others back. **Don't breathe the smoke.** Open windows or leave the room if there is smoke.
+4. **DON'T TOUCH** a hot, smoking or burning battery with your hands.
+5. **Small single cell, adult present:** once flames have stopped, the adult may use metal tongs or a shovel to move it into the sand bucket, or drop it into a bucket of water to cool it. Water is fine on lithium-ion and LiPo cells. It cools them and helps stop the fire spreading.
+6. **Fire spreading, more than one battery, or anyone unsure:** **pull the fire alarm, call 911, and evacuate** using the school's fire procedure. Use a fire extinguisher only on the surrounding fire, only if trained, and only if you have a clear way out.
+7. **Assume it can re-ignite.** A failed cell can flare up again hours later. Leave it in sand or water, outdoors or in a safe spot, and keep watching it.
+8. **First aid:** if electrolyte (liquid from the battery) gets on skin or in eyes, rinse with lots of water for 15 minutes. If anyone breathed in smoke, get them to fresh air. In both cases send them to the school nurse, or call 911 if they're having trouble breathing.
+9. **REPORT** (see Section 10).
 
-2. **Surface & Placement:**
+## 10. Reporting
 
-   * Charge projects on a hard, flat, non-flammable surface (such as a desk, metal tray, or concrete floor). 
+* Report **every** swollen battery, hot battery, smoke, fire or injury to the advisor the same day, even if nothing seemed to go wrong.
+* At home, tell a parent/guardian right away, then tell the advisor at the next meeting.
+* The advisor records each event in the **Club Battery Incident Log** (date, student, project, what happened, what was done) and reports injuries, fires and property damage to school administration following the school's incident reporting process.
 
-   * Keep the project clear of blankets, bedding, clothing, paper, or carpet while charging.
+## 11. Advisor checklist (start of each year)
 
-3. **In-Project Charging:**
+- [ ] SOP reviewed, version and date updated, and approval signature on file.
+- [ ] Battery safety briefing given; attendance recorded.
+- [ ] Signed Acknowledgment Forms collected for every member who gets a battery.
+- [ ] Charging station set up (metal tray or LiPo bags, non-flammable surface, away from exits).
+- [ ] Battery Quarantine Container with dry sand and lid, plus metal tongs, near the work area.
+- [ ] Location of the nearest fire extinguisher, fire alarm pull station and exits shown to members.
+- [ ] Fire-resistant storage container for batteries in place.
+- [ ] Incident log started for the year.
+- [ ] Recycling drop-off location confirmed.
 
-   * When charging a battery via the onboard USB-C port while the cell is enclosed under the PCB in the 3D-printed housing, monitor the enclosure for excessive heat build-up. If the 3D print feels hot to the touch, disconnect USB immediately.
+---
 
-## 5. Home Storage & Long-Term Safety Guidelines
+### Member acknowledgment
 
-When projects are taken home by members:
-
-* **No Unattended Storage in Hot/Enclosed Spaces:** Do not store battery-powered projects in hot attics, vehicles, or packed under clothes/boxes inside closets for long periods.
-
-* **Dormant Storage Check:** If a project will not be used for several months, unscrew the enclosure, disconnect the battery's JST connector, and bring swollen or dead cells back to the club for safe recycling.
-
-## 6. Emergency Procedures (Fire, Smoke, or Thermal Runaway)
-
-In the event of a thermal runaway, battery puncture, or electrical fire:
-
-1. **ALERT:** Shout **"BATTERY EMERGENCY!"** to alert everyone nearby.
-
-2. **EVACUATE & UNPLUG:** If safe, immediately disconnect the USB charging cable. Step back from toxic fumes—**do not inhale lithium fire smoke**.
-
-3. **ISOLATE:** If safe to do so without touching a hot cell, use metal tongs to move the failing unit into a bucket of dry sand or onto a non-flammable surface.
-
-4. **EXTINGUISH:** Do **NOT** use water on a burning lithium cell. Use a **Class D Fire Extinguisher** or smother under dry sand.
-
-5. **NOTIFY:** Immediately inform the adult advisor, school safety officer, or parents/guardians at home.
-
-## 7. Disposal
-
-* **Disposal:** Degraded, swollen, or dead batteries must be unplugged via their JST connector and handed to a mentor. They will be safely neutralized in a salt-water bath before being taken to an official electronic waste recycling center. Never throw lithium batteries into regular trash cans.
-
-### Member Acknowledgment
-
-By participating in Downers Grove South Robotics Club activities, all members agree to abide by these safety rules both at school and at home.
+All members must sign the separate [**Battery Safety Acknowledgment Form**](club_battery_safety_acknowledgment.md) before receiving a battery. Taking part in club activities does not replace the signed form.
